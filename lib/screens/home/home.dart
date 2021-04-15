@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizz/screens/home/components/home_button.dart';
+import 'package:quizz/screens/home/components/language_button.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -35,22 +36,8 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 16),
                 Row(
                   children: [
-                    Expanded(
-                      child: Padding(
-                        padding: EdgeInsets.all(8),
-                        child: Container(
-                          child: Image.asset('images/br.png'),
-                        ),
-                      )
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: EdgeInsets.all(8),
-                        child: Container(
-                          child: Image.asset('images/usa.png'),
-                        ),
-                      )
-                    ),
+                    LanguageButton(onPressed: () {}, image: Image.asset('images/br.png')),
+                    LanguageButton(onPressed: () {}, image: Image.asset('images/usa.png'))
                   ],
                 )
               ],
