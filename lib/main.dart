@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizz/screens/home/home.dart';
-import 'package:quizz/screens/question/question_screen.dart';
+import 'package:quizz/screens/select_level/select_level_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'QuizZ',
-      home: QuestionScreen(),
+      home: SelectLevelScreen(),
     );
   }
 
