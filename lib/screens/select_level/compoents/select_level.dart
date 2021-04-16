@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class SelectLevel extends StatelessWidget {
 
   final int level;
-  VoidCallback onPressed;
+  final VoidCallback onPressed;
 
   SelectLevel({ this.level, this.onPressed });
 

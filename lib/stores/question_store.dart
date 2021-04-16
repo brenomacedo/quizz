@@ -33,5 +33,6 @@ abstract class _QuestionStore with Store {
 
   @computed
   Question get selectedLevel => questions[selectedLevelId - 1];
+  int get questionCount => questions.length;
 
 }
