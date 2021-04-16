@@ -1,0 +1,28 @@
+[
+    {
+        "questionpt": "Qual a raiz quadrada de 144?",
+        "questionen": "What is the squareroot of 144?",
+        "option1pt": "24",
+        "option2pt": "3",
+        "option3pt": "6",
+        "option4pt": "12",
+        "option1en": "24",
+        "option2en": "3",
+        "option3en": "6",
+        "option4en": "12",
+        "correctOption": 4
+    },
+    {
+        "questionpt": "Qual a formula da agua?",
+        "questionen": "What is the water formula?",
+        "option1pt": "H2O",
+        "option2pt": "CO2",
+        "option3pt": "H2SO4",
+        "option4pt": "H2",
+        "option1en": "H2O",
+        "option2en": "CO2",
+        "option3en": "H2SO4",
+        "option4en": "H2",
+        "correctOption": 4
+    }
+]
