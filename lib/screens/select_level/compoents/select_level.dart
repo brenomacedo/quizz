@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 class SelectLevel extends StatelessWidget {
 
   final int level;
+  VoidCallback onPressed;
 
-  SelectLevel({ this.level });
+  SelectLevel({ this.level, this.onPressed });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      child: Text('1', style: TextStyle(
+      child: Text('$level', style: TextStyle(
         color: Colors.lightBlue,
         fontSize: 25
       )),
@@ -17,7 +18,7 @@ class SelectLevel extends StatelessWidget {
         shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(16))),
         backgroundColor: MaterialStateProperty.all(Colors.white)
       ),
-      onPressed: () {},
+      onPressed: onPressed,
     );
   }
 }

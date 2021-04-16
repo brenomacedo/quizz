@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:quizz/screens/question/components/option.dart';
+import 'package:quizz/stores/question_store.dart';
 
 class QuestionScreen extends StatelessWidget {
+
+  final QuestionStore questionStore = GetIt.I<QuestionStore>();
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -16,14 +21,6 @@ class QuestionScreen extends StatelessWidget {
         ),
         Scaffold(
           appBar: AppBar(
-            title: Row(
-              children: [
-                IconButton(
-                  icon: Icon(Icons.home),
-                  onPressed: () {},
-                )
-              ],
-            ),
             backgroundColor: Colors.transparent,
             elevation: 0,
           ),
@@ -33,17 +30,15 @@ class QuestionScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text('Pergunta: quanto é 4+4?', style: TextStyle(
+                Text(questionStore.selectedLevel.qquestionPT, style: TextStyle(
                   color: Colors.white,
                   fontSize: 24
                 ), textAlign: TextAlign.center),
                 SizedBox(height: 16),
-                Option(onPressed: () {
-                  print('hello');
-                }),
-                Option(onPressed: () {}),
-                Option(onPressed: () {}),
-                Option(onPressed: () {}),
+                Option(answer: questionStore.selectedLevel.qoption1PT ,onPressed: () {}),
+                Option(answer: questionStore.selectedLevel.qoption2PT ,onPressed: () {}),
+                Option(answer: questionStore.selectedLevel.qoption3PT ,onPressed: () {}),
+                Option(answer: questionStore.selectedLevel.qoption4PT ,onPressed: () {}),
               ],
             ),
           ),

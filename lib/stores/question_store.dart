@@ -13,12 +13,25 @@ abstract class _QuestionStore with Store {
   @observable
   bool loading = true;
 
-  ObservableList<Question> questions = ObservableList();
+  ObservableList<Question> questions = ObservableList<Question>();
 
   @action
   Future<void> loadQuestions() async {
-    questions = await QuestionHelper().getQuestions();
+    List<Question> newQuestions = await QuestionHelper().getQuestions();
+    questions.clear();
+    questions.addAll(newQuestions);
     loading = false;
   }
+
+  @observable
+  int selectedLevelId = 1;
+  
+  @action
+  void setSelectedLevelId(int id) {
+    selectedLevelId = id;
+  }
+
+  @computed
+  Question get selectedLevel => questions[selectedLevelId - 1];
 
 }

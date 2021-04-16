@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quizz/screens/home/components/home_button.dart';
 import 'package:quizz/screens/home/components/language_button.dart';
+import 'package:quizz/screens/question/question_screen.dart';
+import 'package:quizz/screens/select_level/select_level_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -28,11 +30,23 @@ class HomeScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ), textAlign: TextAlign.center),
                 SizedBox(height: 16),
-                HomeButton(text: 'Continuar', onPressed: () {}),
+                HomeButton(text: 'Continuar', onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => QuestionScreen())
+                  );
+                }),
                 SizedBox(height: 8),
-                HomeButton(text: 'Iniciar', onPressed: () {}),
+                HomeButton(text: 'Iniciar', onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => QuestionScreen())
+                  );
+                }),
                 SizedBox(height: 8),
-                HomeButton(text: 'Selecionar nível', onPressed: () {}),
+                HomeButton(text: 'Selecionar nível', onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => SelectLevelScreen())
+                  );
+                }),
                 SizedBox(height: 16),
                 Row(
                   children: [

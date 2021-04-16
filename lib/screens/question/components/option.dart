@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 class Option extends StatelessWidget {
 
   final VoidCallback onPressed;
+  final String answer;
 
-  Option({ this.onPressed });
+  Option({ this.onPressed, this.answer });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      child: Text('Resposta', style: TextStyle(
+      child: Text(answer, style: TextStyle(
         color: Colors.lightBlue,
         fontSize: 18
       )),
